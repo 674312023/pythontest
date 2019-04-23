@@ -30,3 +30,5 @@ psw = conf.get("email", "psw")
 receiver = conf.get("email", "receiver")
 
 port = conf.get("email", "port")
+
+print(port)

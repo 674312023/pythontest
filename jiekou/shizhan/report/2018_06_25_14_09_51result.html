@@ -362,9 +362,9 @@ function hide_img(obj){
 </div>
 <div class='heading'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-07-10 10:45:34</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:04.114235</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>4</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-06-25 14:09:51</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:03.726213</p>
+<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>1 <span class="tj errorCase">Error</span>5</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -397,35 +397,61 @@ function hide_img(obj){
     <th>错误截图</th>
 </tr>
 
-<tr class='passClass'>
-    <td>baidu.test_01.Test</td>
-    <td>3</td>
-    <td>3</td>
+<tr class='errorClass'>
+    <td>test_01.Blog_login</td>
+    <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td ><div class='testcase'>test01</div></td>
+<tr id='ft1.1' class='none'>
+    <td ><div class='testcase'>test_login1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a></span>
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a></span>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: start
-执行测试用例01
-end
+ft1.1: [2018-06-25 14:09:51,460] - logger.py] - INFO: ------登录成功用例：start!---------
+[2018-06-25 14:09:51,462] - logger.py] - INFO: 输入正确账号：这里是抓包后获取的博客园的加密账号
+[2018-06-25 14:09:51,464] - logger.py] - INFO: 输入正确密码：这里是抓包后获取的博客园的加密密码
+Traceback (most recent call last):
+  File "D:\pythontest\jiekou\shizhan\case\test_01.py", line 39, in test_login1
+    result = self.login(username, psw)
+  File "D:\pythontest\jiekou\shizhan\case\test_01.py", line 27, in login
+    res = requests.post(url, headers=header, json=json_data, verify=False)
+  File "E:\Python34\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\Python34\lib\http\client.py", line 1090, in request
+    self._send_request(method, url, body, headers)
+  File "E:\Python34\lib\http\client.py", line 1123, in _send_request
+    self.putheader(hdr, value)
+  File "E:\Python34\lib\http\client.py", line 1066, in putheader
+    values[i] = one_value.encode('latin-1')
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 0-8: ordinal not in range(256)
 
 
         </pre>
@@ -436,25 +462,51 @@ end
     <td>无截图</td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td ><div class='testcase'>test02</div></td>
+<tr id='ft1.2' class='none'>
+    <td ><div class='testcase'>test_login2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        通过</a></span>
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a></span>
 
-    <div id='div_pt1.2' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2: start
-执行测试用例02
-end
+ft1.2: [2018-06-25 14:09:53,183] - logger.py] - INFO: ------登录失败用例：start!---------
+[2018-06-25 14:09:53,186] - logger.py] - INFO: 输入正确账号：这里是抓包后获取的博客园的加密账号
+[2018-06-25 14:09:53,188] - logger.py] - INFO: 输入错误密码：这里是抓包后获取的博客园的加密账号
+Traceback (most recent call last):
+  File "D:\pythontest\jiekou\shizhan\case\test_01.py", line 51, in test_login2
+    result = self.login(username, psw)
+  File "D:\pythontest\jiekou\shizhan\case\test_01.py", line 27, in login
+    res = requests.post(url, headers=header, json=json_data, verify=False)
+  File "E:\Python34\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\Python34\lib\http\client.py", line 1090, in request
+    self._send_request(method, url, body, headers)
+  File "E:\Python34\lib\http\client.py", line 1123, in _send_request
+    self.putheader(hdr, value)
+  File "E:\Python34\lib\http\client.py", line 1066, in putheader
+    values[i] = one_value.encode('latin-1')
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 0-8: ordinal not in range(256)
 
 
         </pre>
@@ -465,64 +517,191 @@ end
     <td>无截图</td>
 </tr>
 
-<tr id='pt1.3' class='hiddenRow'>
-    <td ><div class='testcase'>test03</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
-        通过</a></span>
-
-    <div id='div_pt1.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.3: start
-执行测试用例03
-end
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='passClass'>
-    <td>blog.test_04.Test</td>
-    <td>1</td>
+<tr class='errorClass'>
+    <td>test_02.Test_Kuaidi: 测试快递查询接口</td>
+    <td>2</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt2.1' class='hiddenRow'>
-    <td ><div class='testcase'>test04</div></td>
+<tr id='ft2.1' class='none'>
+    <td ><div class='testcase'>test_tiantian</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        通过</a></span>
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        错误</a></span>
 
-    <div id='div_pt2.1' class="popup_window">
+    <div id='div_ft2.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.1: start
-执行测试用例04
-end
+ft2.1: [2018-06-25 14:09:53,337] - logger.py] - INFO: ----------start!-------
+[2018-06-25 14:09:53,339] - logger.py] - INFO: 测试单号：560697415000  快递名称：天天快递
+[2018-06-25 14:09:53,341] - logger.py] - INFO: 测试url地址：http://www.kuaidi.com/index-ajaxselectcourierinfo-560697415000-tiantian.html
+[2018-06-25 14:09:54,113] - logger.py] - INFO: 获取请求结果：{'url': 'http://www.ttkdex.com', 'timeused': '--', 'nu': '560697415000', 'data': '', 'time': '', 'exceed': '', 'status': 0, 'company': None, 'success': False, 'phone': '400-188-8888', 'companytype': 'tiantian', 'reason': '快递公司参数异常：单号不存在或者已经过期', 'ico': '/data/upload/201407/tt_logo.gif', 'rank': '2.4'}
+[2018-06-25 14:09:54,115] - logger.py] - INFO: 获取公司名称：None
+[2018-06-25 14:09:54,117] - logger.py] - INFO: 获取data内容：
+Traceback (most recent call last):
+  File "D:\pythontest\jiekou\shizhan\case\test_02.py", line 55, in test_tiantian
+    self.chaxun_kuaidi(danhao, kd, kd_name)
+  File "D:\pythontest\jiekou\shizhan\case\test_02.py", line 31, in chaxun_kuaidi
+    get_result = data[0]['context']  # 获取已签收状态
+IndexError: string index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td ><div class='testcase'>test_yunda</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <span class='status passCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        通过</a></span>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: [2018-06-25 14:09:54,157] - logger.py] - INFO: ----------start!-------
+[2018-06-25 14:09:54,159] - logger.py] - INFO: 测试单号：1202247993797  快递名称：韵达快递
+[2018-06-25 14:09:54,161] - logger.py] - INFO: 测试url地址：http://www.kuaidi.com/index-ajaxselectcourierinfo-1202247993797-yunda.html
+[2018-06-25 14:09:54,604] - logger.py] - INFO: 获取请求结果：{'url': 'http://www.yundaex.com', 'timeused': '--', 'nu': '1202247993797', 'data': [{'time': '2016-08-21 19:47:14', 'context': '到达：贵州都匀市公司 由 已签收 签收'}, {'time': '2016-08-21 09:45:36', 'context': '到达：贵州都匀市公司 指定：派送'}, {'time': '2016-08-20 06:32:38', 'context': '到达：贵州贵阳分拨中心 发往：贵州都匀市公司'}, {'time': '2016-08-20 06:17:24', 'context': '到达：贵州贵阳分拨中心 上级站点：福建晋江分拨中心'}, {'time': '2016-08-18 21:48:53', 'context': '到达：福建晋江分拨中心 发往：贵州贵阳分拨中心'}, {'time': '2016-08-18 21:46:25', 'context': '到达：福建晋江分拨中心'}, {'time': '2016-08-18 06:48:19', 'context': '到达：福建市场部台江服务部 发往：贵州贵阳分拨中心'}, {'time': '2016-08-18 05:51:57', 'context': '到达：福建市场部台江服务部 已揽件'}], 'time': '', 'exceed': '', 'status': 6, 'company': '韵达快递', 'success': True, 'phone': '95546', 'companytype': 'yunda', 'reason': '', 'ico': '/data/upload/201407/yd_logo.gif', 'rank': '2.4'}
+[2018-06-25 14:09:54,605] - logger.py] - INFO: 获取公司名称：韵达快递
+[2018-06-25 14:09:54,607] - logger.py] - INFO: 获取data内容：[{'time': '2016-08-21 19:47:14', 'context': '到达：贵州都匀市公司 由 已签收 签收'}, {'time': '2016-08-21 09:45:36', 'context': '到达：贵州都匀市公司 指定：派送'}, {'time': '2016-08-20 06:32:38', 'context': '到达：贵州贵阳分拨中心 发往：贵州都匀市公司'}, {'time': '2016-08-20 06:17:24', 'context': '到达：贵州贵阳分拨中心 上级站点：福建晋江分拨中心'}, {'time': '2016-08-18 21:48:53', 'context': '到达：福建晋江分拨中心 发往：贵州贵阳分拨中心'}, {'time': '2016-08-18 21:46:25', 'context': '到达：福建晋江分拨中心'}, {'time': '2016-08-18 06:48:19', 'context': '到达：福建市场部台江服务部 发往：贵州贵阳分拨中心'}, {'time': '2016-08-18 05:51:57', 'context': '到达：福建市场部台江服务部 已揽件'}]
+[2018-06-25 14:09:54,609] - logger.py] - INFO: 获取已签收状态：到达：贵州都匀市公司 由 已签收 签收
+[2018-06-25 14:09:54,610] - logger.py] - INFO: ----------pass!-------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td>无截图</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_03.Test</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c3',2)">详情</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td ><div class='testcase'>test_del</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        错误</a></span>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: [2018-06-25 14:09:54,613] - logger.py] - INFO: ------start!--------
+[2018-06-25 14:09:54,614] - logger.py] - INFO: 第一步：登录
+Traceback (most recent call last):
+  File "D:\pythontest\jiekou\shizhan\case\test_03.py", line 27, in test_del
+    self.blog.login()
+  File "D:\pythontest\jiekou\shizhan\case\loginblog.py", line 29, in login
+    res = self.s.post(url, headers=header, json=json_data, verify=False)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\Python34\lib\http\client.py", line 1090, in request
+    self._send_request(method, url, body, headers)
+  File "E:\Python34\lib\http\client.py", line 1123, in _send_request
+    self.putheader(hdr, value)
+  File "E:\Python34\lib\http\client.py", line 1066, in putheader
+    values[i] = one_value.encode('latin-1')
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 0-10: ordinal not in range(256)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td>无截图</td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td ><div class='testcase'>test_login</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        错误</a></span>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: [2018-06-25 14:09:55,067] - logger.py] - INFO: ------start!--------
+Traceback (most recent call last):
+  File "D:\pythontest\jiekou\shizhan\case\test_03.py", line 16, in test_login
+    result = self.blog.login()
+  File "D:\pythontest\jiekou\shizhan\case\loginblog.py", line 29, in login
+    res = self.s.post(url, headers=header, json=json_data, verify=False)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\Python34\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\Python34\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "E:\Python34\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "E:\Python34\lib\http\client.py", line 1090, in request
+    self._send_request(method, url, body, headers)
+  File "E:\Python34\lib\http\client.py", line 1123, in _send_request
+    self.putheader(hdr, value)
+  File "E:\Python34\lib\http\client.py", line 1066, in putheader
+    values[i] = one_value.encode('latin-1')
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 0-10: ordinal not in range(256)
 
 
         </pre>
@@ -535,17 +714,17 @@ end
 
 <tr id='total_row'>
     <th>统计</th>
-    <th>4</th>
-    <th>4</th>
+    <th>6</th>
+    <th>1</th>
     <th>0</th>
-    <th>0</th>
+    <th>5</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
 </tr>
 </table>
 <script>
     showCase(1);
-    drawCircle(4, 0, 0);
+    drawCircle(1, 0, 5);
 </script>
 
 <div id='ending'>&nbsp;</div>

@@ -13,8 +13,10 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36
 payload = {"input1": "XX+76cmCpzF0Qvr9BHCC+D+0CS8U4CPOIdq/T5E+6owxkOjvZBPWAweUwf2VfseekRRST0nSfQqJhvIUYllW+Z7YVB7la3bwhIqcrSRYWWN+8cXxQ4fPsuxDD4fpDuBsiVngVFdZwQtQdmZvZl679Vc9O+osGkBAt4quxGxIc3I=",
            "input2": "mLetz6xk1flkU/wgj3NpDMIaSwohR+TnNEKWhZ/02cytIrAcrwzdBOVwyxl6zoPYMEnsY3d+1KAVKB+YyWnNLu9YKB6BUkSdhX+LzQtte4F/ZnMaXL/UW6soMm+ZBK6ze2ZRxuu1bdeaPsBeQ5FH62VJmxkaHa7eAV0v3UgtHkQ=",
            "remember": False}
-#data_json = json.dumps(payload)
-r = requests.post(url, json=payload, headers=headers, verify=False)
+print(type(payload))
+data_json = json.dumps(payload)
+print(type(data_json))
+r = requests.post(url, json=data_json, headers=headers, verify=False)
 print(type(r.content))
-print(type(r.json()))
+print(r.json())
 print(r.status_code)

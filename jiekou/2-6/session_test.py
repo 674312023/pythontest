@@ -17,7 +17,7 @@ c.set('.Cnblogs.AspNetCore.Cookies', 'CfDJ8FHXRRtkJWRFtU30nh_M9mAIoGWQ-dsJ1fB3L4
 s.cookies.update(c)
 print(s.cookies)
 # 登录成功后保存编辑内容
-r1 = s.get("https://i.cnblogs.com/EditPosts.aspx?opt=1", headers=headers, verify=False)
+#r1 = s.get("https://i.cnblogs.com/EditPosts.aspx?opt=1", headers=headers, verify=False)
 # 保存草稿箱
 url2= "https://i.cnblogs.com/EditPosts.aspx?opt=1"
 body = {"__VIEWSTATE": "",

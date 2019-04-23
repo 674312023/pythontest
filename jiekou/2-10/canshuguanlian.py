@@ -43,4 +43,3 @@ url3 = "https://i.cnblogs.com/post/delete"
 json3 = {"postId": postid[0]}
 r3 = s.post(url3, json=json3, verify=False)
 print(r3.json())
-
